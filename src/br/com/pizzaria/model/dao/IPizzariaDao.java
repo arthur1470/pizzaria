@@ -6,5 +6,5 @@ import br.com.pizzaria.model.Pizza;
 
 public interface IPizzariaDao {
 	
-	List<Pizza> getCardapio();
+	List<Pizza> getCardapio(String tipo);
 }

@@ -40,7 +40,10 @@ public class PizzariaController {
 	
 	@RequestMapping("/cardapio")
 	public String cardapio(Model model) {
-		model.addAttribute("listaSabores", service.getCardapio());
+		model.addAttribute("tradicionais", service.getCardapio("Tradicionais"));
+		model.addAttribute("vegetariana", service.getCardapio("Vegetariana"));
+		model.addAttribute("doces", service.getCardapio("Doces"));
+		model.addAttribute("especiais", service.getCardapio("Especiais"));
 		return "cardapio/cardapio";
 	}
 }

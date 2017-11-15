@@ -17,8 +17,10 @@ public class PizzariaDao implements IPizzariaDao{
 	private EntityManager manager;
 	
 	@Override
-	public List<Pizza> getCardapio() {
-		Query query = manager.createQuery("select p from Pizza p");
+	public List<Pizza> getCardapio(String tipo) {
+		Query query = manager.createQuery("select p from Pizza p "
+										+ "where p.tipo = :paramTipo");
+		query.setParameter("paramTipo", tipo);
 		return query.getResultList();
-	}
+	}	
 }

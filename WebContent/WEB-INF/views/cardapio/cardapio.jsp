@@ -18,25 +18,33 @@
 		<div class="cardapio">
 		<img alt="cardapio" class="cardapio" src="${img}/teste.png" />
 		</div>
-		
+		<c:forEach var="pizzaTrad" items="tradicionais">
 		<div class="tradicionais">
-			Calabreza <br>
-			(Presunto, queijo, dsadsadsadsateste)
+			<c:forEach var="pizzaTrad" items="${tradicionais}">
+				${pizzaTrad.sabor} <br />
+				${pizzaTrad.ingredientes}	<br />			
+			</c:forEach>
 		</div>
-		
+		</c:forEach>
 		<div class="vegetariana">
-			vegetariana <br>
-			(ummonte dje podjsadoisajdsaoijdsaoidjsa)
+			<c:forEach var="pizzaVeg" items="${vegetariana}">
+				${pizzaVeg.sabor} <br />
+				${pizzaVeg.ingredientes}	<br />			
+			</c:forEach>
 		</div>
 		
 		<div class="especiais">
-			Especiais <br>
-			(ummonte dje podjsadoisajdsaoijdsaoidjsa)
+			<c:forEach var="pizzaEsp" items="${especiais}">
+				${pizzaEsp.sabor} <br />
+				${pizzaEsp.ingredientes}	<br />			
+			</c:forEach>
 		</div>
 		
 		<div class="doces">
-			DOCeS<br>
-			(ummonte dje podjsadoisajdsaoijdsaoidjsa)
+			<c:forEach var="pizzaDoce" items="${doces}">
+				${pizzaDoce.sabor} <br />
+				${pizzaDoce.ingredientes}	<br />			
+			</c:forEach>
 		</div>
 		
 		<c:import url="/rodape"/>

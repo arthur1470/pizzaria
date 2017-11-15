@@ -5,56 +5,47 @@
 
 
 <html>
-<head>
-<script language="JavaScript">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<c:import url="/headerAdmin"></c:import>		
+		<form class="container corpotop" action="adicionarSabor" method="POST">
 
- function mascara(t, mask){
- var i = t.value.length;
- var saida = mask.substring(1,0);
- var texto = mask.substring(i)
- if (texto.substring(0,1) != saida){
- t.value += texto.substring(0,1);
- }
- }
- </script>
-
-
-<style>
-	.corpotop{
-		padding-top: 36px;
-	}
-</style>
-
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<c:import url="/admin/cabecalho-admin.jsp"></c:import>
-<c:url value="/controleGeral?ideia=AdicionarSabor" var="adicionarSabor"/>
-<form class="container corpotop" action="${adicionarSabor}" method="POST">
-
-  <div class="form-group ">
-    <label for="exampleInputEmail1">Sabor</label>
-    <input type="text" name="sabor" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o Sabor">
-  </div>
-    <div class="form-group">
-    <label for="exampleInputPassword1">Ingredientes</label>
-    <input type="text" name="ingredientes" class="form-control" id="exampleInputPassword1" placeholder="Ingredientes (Exemplo,Exemplo,Exemplo)">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Preço Média R$</label>
-    <input type="text" name="precoMedia" class="form-control" id="exampleInputPassword1" placeholder="Preço pizza média" onkeypress="mascara(this, '##.##')" maxlength="5">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Preço Grande R$</label>
-    <input type="text" name="precoGrande" class="form-control" id="exampleInputPassword1" placeholder="Preço pizza grande" onkeypress="mascara(this, '##.##')" maxlength="5">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Preço Tamanho Familia R$</label>
-    <input type="text" name="precoFamilia" class="form-control" id="exampleInputPassword1" placeholder="Preço pizza tamanho familia" onkeypress="mascara(this, '##.##')" maxlength="5">
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Salvar</button>
-</form>
-</body>
+			 <div class="form-group ">
+			   <label for="sabor">Sabor</label>
+			   <input type="text" name="sabor" class="form-control" id="sabor" aria-describedby="emailHelp" placeholder="Digite o Sabor">
+			 </div>
+			   <div class="form-group">
+			   <label for="ingredientes">Ingredientes</label>
+			   <input type="text" name="ingredientes" class="form-control" id="ingredientes" placeholder="Ingredientes (Exemplo,Exemplo,Exemplo)">
+			 </div>
+			  
+			 <div class="form-group">
+				<label for="tipo">Tipo de Pizza</label> 
+				<select id="tipo" class="form-control" name="tipo">
+					<option selected>Tradicionais</option>
+					<option>Vegetariana</option>
+					<option>Especiais</option>
+					<option>Doces</option>
+				</select>
+			</div>
+			  
+			  <div class="form-group">
+			    <label for="precoMedia">Preço Média R$</label>
+			    <input type="text" name="precoMedia" class="form-control" id="precoMedia" placeholder="Preço pizza média" onkeypress="mascara(this, '##.##')" maxlength="5">
+			  </div>
+			  <div class="form-group">
+			    <label for="precoGrande">Preço Grande R$</label>
+			    <input type="text" name="precoGrande" class="form-control" id="precoGrande" placeholder="Preço pizza grande" onkeypress="mascara(this, '##.##')" maxlength="5">
+			  </div>
+			  <div class="form-group">
+			    <label for="precoFamilia">Preço Tamanho Familia R$</label>
+			    <input type="text" name="precoFamilia" class="form-control" id="precoFamilia" placeholder="Preço pizza tamanho familia" onkeypress="mascara(this, '##.##')" maxlength="5">
+			  </div>
+	  
+  			<button type="submit" class="btn btn-primary">Salvar</button>
+		</form>
+	</body>
 </html>

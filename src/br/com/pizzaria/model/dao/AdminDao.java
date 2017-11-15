@@ -9,6 +9,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 
 import br.com.pizzaria.model.Pedido;
+import br.com.pizzaria.model.Pizza;
 
 @Repository
 public class AdminDao implements IAdminDao{
@@ -20,6 +21,11 @@ public class AdminDao implements IAdminDao{
 	public List<Pedido> getPedidos() {
 		Query query = manager.createQuery("select p from Pedido p");
 		return query.getResultList();
+	}
+
+	@Override
+	public void adicionarSabor(Pizza pizza) {
+		manager.persist(pizza);		
 	}
 
 }

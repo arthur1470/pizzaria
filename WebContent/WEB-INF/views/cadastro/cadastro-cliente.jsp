@@ -58,7 +58,7 @@
 						<label for="inputState">Estado</label> 
 						<select id="inputState"
 							class="form-control" name="estado">
-							<option selected">Pernambuco</option>
+							<option selected>Pernambuco</option>						
 						</select>
 					</div>
 					<div class="form-group col-md-2">

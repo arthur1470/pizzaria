@@ -14,7 +14,7 @@ public class PizzariaService {
 	@Autowired
 	private IPizzariaDao dao;
 	
-	public List<Pizza> getCardapio(){
-		return dao.getCardapio();
+	public List<Pizza> getCardapio(String tipo){
+		return dao.getCardapio(tipo);
 	}
 }
