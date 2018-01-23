@@ -1,0 +1,79 @@
+.top{
+	margin-top : 15px;
+}
+
+.menu a{
+	width: 140px;
+	text-align: center;
+}
+
+.menu a:hover{
+	background-color : orange;
+	transition : 1s;
+}
+
+.login{
+	margin-top: 20px;
+	position : relative;
+	float: right;
+}
+
+.cardapio img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tradicionais{
+	text-transform: uppercase;
+	position:absolute;
+	font: bold 14px/25px Helvetica, Sans-Serif; 
+	margin-left: 269px;
+	margin-top: -930px;
+	color: black;
+	width: 150px;
+}
+
+.vegetariana{
+	text-transform: uppercase;
+	position:absolute;
+	font: bold 14px/25px Helvetica, Sans-Serif;
+	margin-left: 540px;
+	margin-top: -750px;
+	color: black;
+	width: 150px;
+}
+
+.especiais{
+	text-transform: uppercase;
+	position:absolute;
+	font: bold 14px/25px Helvetica, Sans-Serif;  
+	margin-left: 800px;
+	margin-top: -930px;
+	color: black;
+	width: 150px;
+}
+
+.doces{
+	text-transform: uppercase;
+	position:absolute;
+	font: bold 14px/25px Helvetica, Sans-Serif; 
+	margin-left: 800px;
+	margin-top: -490px;
+	color: black;
+	width: 150px;
+}
+
+div.corpo{
+	padding-left : 300px;
+	padding-right : 300px;
+	padding-top : 15px;
+	padding-bottom: 20px;
+}
+
+.log{
+	margin-top  : 60px;
+	margin-left : 30%;
+	margin-right : 30%;
+	
+}

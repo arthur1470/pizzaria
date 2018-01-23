@@ -1,0 +1,60 @@
+* {
+	margin: 0px
+	padding: 0px;
+}
+/* Menu do index */
+
+ul li { 
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #000000;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #FFFFFF;
+	border-radius: 3px;
+	-moz-border-radius:3;
+	-webkit-border-radius:3px;
+	
+	 }
+
+ul li a {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	 }
+
+ul li:hover {
+	background-color: #FF0000
+}
+/*Transição de imagem pagina index */
+
+div {
+	width: 400px;
+	height: 100px;
+	background-color: red;
+	border: 2px solid black;
+	
+}
+
+#mydiv {
+	-ms-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+} 
+/* Codigo de transitions da pagina de promoções */
+
+#transitions {
+	width: 550px;
+	height: 300px;
+	background: D2DCF0;
+	transition: width 2s, height 4s;
+
+}
+
+#transitions:hover {
+	width: 800px;
+	height: 350px;
+}
+
