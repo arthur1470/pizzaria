@@ -21,29 +21,37 @@
 		<c:forEach var="pizzaTrad" items="tradicionais">
 		<div class="tradicionais">
 			<c:forEach var="pizzaTrad" items="${tradicionais}">
-				${pizzaTrad.sabor} <br />
-				${pizzaTrad.ingredientes}	<br />			
+				<a href="pedir?id=${pizzaTrad.id}">	
+					<span class="sabor">${pizzaTrad.sabor}</span> <br />
+					<span class="ingredientes">${pizzaTrad.ingredientes}</span>	<br /><br />
+				</a>			
 			</c:forEach>
 		</div>
 		</c:forEach>
 		<div class="vegetariana">
 			<c:forEach var="pizzaVeg" items="${vegetariana}">
-				${pizzaVeg.sabor} <br />
-				${pizzaVeg.ingredientes}	<br />			
+				<a href="pedir?id=${pizzaVeg.id}">
+					<span class="sabor">${pizzaVeg.sabor}</span> <br />
+					<span class="ingredientes">${pizzaVeg.ingredientes}</span>	<br /><br />
+				</a>			
 			</c:forEach>
 		</div>
 		
 		<div class="especiais">
 			<c:forEach var="pizzaEsp" items="${especiais}">
-				${pizzaEsp.sabor} <br />
-				${pizzaEsp.ingredientes}	<br />			
+				<a href="pedir?id=${pizzaEsp.id}">
+					<span class="sabor">${pizzaEsp.sabor}</span> <br />
+					<span class="ingredientes">${pizzaEsp.ingredientes}</span> <br /><br />
+				</a>			
 			</c:forEach>
 		</div>
 		
 		<div class="doces">
 			<c:forEach var="pizzaDoce" items="${doces}">
-				${pizzaDoce.sabor} <br />
-				${pizzaDoce.ingredientes}	<br />			
+				<a href="pedir?id=${pizzaDoce.id}">
+					<span class="sabor">${pizzaDoce.sabor}</span> <br />
+					<span class="ingredientes">${pizzaDoce.ingredientes}</span>	<br /><br />
+				</a>			
 			</c:forEach>
 		</div>
 		

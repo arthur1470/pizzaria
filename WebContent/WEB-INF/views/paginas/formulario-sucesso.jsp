@@ -4,14 +4,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
-		<meta http-equiv="refresh" content="2; url=/Pizzaria/">
-		<title>Pedido Efetuado com Sucesso!</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Formulário Enviado com Sucesso!</title>
 	</head>
 	<body>
 		<c:import url="/header"></c:import>
 		
-		<h1> ${clienteLogado.nome}, seu pedido foi efetuado com sucesso, caso necessário, entraremos em contato
-		pelo número informado!</h1>
+		<h1>Formulário enviado com sucesso! Iremos verificar se suas características se 
+		enquadram com o nosso perfil de profissional e entraremos em contato com você!</h1>
 		
 		<c:import url="/rodape"></c:import>
 	</body>

@@ -1,10 +1,14 @@
 package br.com.pizzaria.controller;
 
+import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.pizzaria.model.Candidato;
 import br.com.pizzaria.servico.PizzariaService;
 
 @Controller
@@ -18,13 +22,19 @@ public class PizzariaController {
 		return "componentes/header";
 	}
 	
+	@RequestMapping("/headerDados")
+	public String headerDados() {
+		return "componentes/header-dados";
+	}
+	
 	@RequestMapping("/rodape")
 	public String rodape() {
 		return "componentes/rodape";
 	}
 	
 	@RequestMapping("/inicio")
-	public String inicio() {
+	public String inicio(HttpSession session) {
+		session.removeAttribute("pizzaPedido");
 		return "index";
 	}
 	
@@ -45,5 +55,20 @@ public class PizzariaController {
 		model.addAttribute("doces", service.getCardapio("Doces"));
 		model.addAttribute("especiais", service.getCardapio("Especiais"));
 		return "cardapio/cardapio";
+	}
+	
+	@RequestMapping("/trabalheConosco")
+	public String trabalheConosco() {
+		return "paginas/trabalhe-conosco";
+	}
+	
+	@Transactional
+	@RequestMapping("/enviarFormulario")
+	public String enviarFormulário(Candidato candidato) {
+		if(service.candidatoEValido(candidato)) {
+			service.enviarFormularioCandidato(candidato);
+			return "paginas/formulario-sucesso";
+		}
+		return "redirect:trabalheConosco";
 	}
 }

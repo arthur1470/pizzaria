@@ -1,34 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+	<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="pt">
 	<head>
-		<title>Pizzaria Sonho</title>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="Script/style.css">
-		<link rel="stylesheet" type="text/css" href="Script/css1.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-
+		<title>Promoções Pizzaria Sonho</title>
+		<meta charset="ISO-8859-1" />
 	</head>
-
-		<body>
-			<fieldset>
-					<legend>Promoções</legend>
-				<table width="100%" border="0">
-					</td>
-					</tr>
-					<tr>
-						<td>
-							<div><center><h2>Confira Nosso Cardapio Clicando</h2></center></div><div id="mydiv"><center><a href="cardapio.html"><h1>AQUI!</h1></a></center></div>
-						</td>
-					<tr>
-						<td width="60%">
-							<center><video width="640" height="480" controls>
-							<source src="Vídeo/Vídeo Pizzaria.mp4" type="video/mp4"></video></center>
-						</td>
-													
-				</table>
-			</fieldset>
-		</body>
+	<body>
+		<c:url value="/resources/video/video_pizzaria.mp4" var="video"></c:url>
+		<c:import url="/header"></c:import>
+		
+		<div class="promo">
+			<h1 class="promo">Promoções Pizzaria Sonho</h1>
+			<h2 class="promo"><a href="cardapio" class="promo">Confira aqui nosso cardápio!</a></h2>
+		</div>
+		<div align="center">
+			<video class="promo" src="${video}" width="480" height="360" controls></video>
+		</div>
+		<c:import url="/rodape"></c:import>		
+	</body>
 </html>

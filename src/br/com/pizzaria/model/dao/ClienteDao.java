@@ -45,4 +45,10 @@ public class ClienteDao implements IClienteDao{
 		Query query = manager.createQuery("select c from Cliente c");
 		return query.getResultList();	
 	}
+
+	@Override
+	public void editarCliente(Cliente cliente) {
+		manager.merge(cliente);
+	}
+
 }

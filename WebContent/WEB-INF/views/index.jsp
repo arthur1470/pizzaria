@@ -4,14 +4,14 @@
 <!DOCTYPE html>
 <html lang="pt">
 	<head>
-		<title></title>
+		<title>Pizzaria Sonho</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<c:import url="/header"></c:import>
 		
-		<center><b id="fonte"><h1><i>As melhores pizzas e os melhores preços do Recife!</i></h1></center></b>
+		<center><b id="fonte"><h1><i>As melhores pizzas e os melhores preços do Recife!</i></h1></b></center>
 		
 		<div class="w3-container w3-orange">
 			<h1>Curiosidades</h1>

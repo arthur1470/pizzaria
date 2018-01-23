@@ -8,6 +8,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
+import br.com.pizzaria.model.Pedido;
 import br.com.pizzaria.model.Pizza;
 
 @Repository
@@ -22,5 +23,15 @@ public class PizzariaDao implements IPizzariaDao{
 										+ "where p.tipo = :paramTipo");
 		query.setParameter("paramTipo", tipo);
 		return query.getResultList();
+	}
+
+	@Override
+	public Pizza buscarPizza(Integer id) {
+		return manager.find(Pizza.class, id);
+	}
+
+	@Override
+	public void adicionarPedido(Pedido pedido) {
+		manager.persist(pedido);
 	}	
 }

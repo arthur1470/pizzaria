@@ -29,22 +29,31 @@
 						<label for="nome">Nome</label> <input type="text"
 							class="form-control" name="nome" id="nome" placeholder="Nome Completo">
 					</div>
-					<div class="form-group col-md-4">
-						<label for="cpf">CPF</label> <input type="text"
-							class="form-control" id="cpf" placeholder="CPF"
-							onkeypress="mascara(this, '###.###.###-##')" maxlength="14">
-					</div>
 					<div class="form-group col-md-2	">
 						<label for="dataNascimento">Data de Nascimento</label>
 						<projeto:campoData id="dataNascimento"/>
 					</div>
+					<div class="form-group col-md-2">
+						<label for="cpf">CPF</label> <input type="text"
+							class="form-control" name="cpf" id="cpf" placeholder="CPF"
+							onkeypress="mascara(this, '###.###.###-##')" maxlength="14">
+					</div>
+					<div class="form-group col-md-2">
+						<label for="numeroCelular">Numero Celular</label> <input type="text"
+							class="form-control" name="numeroCelular" id="numeroCelular" placeholder="81-99999-9999"
+							onkeypress="mascara(this, '##-#####.####')" maxlength="13">
+					</div>			
 				</div>
 				<div class="form-row">
-					<div class="form-group col-md-8">
+					<div class="form-group col-md-6">
 						<label for="endereco">Endereço</label> <input type="text"
-							class="form-control" name="endereco" id="inputAddress" placeholder="Rua são miguel, 190 casa">
+							class="form-control" name="endereco" id="endereco" placeholder="Rua são miguel">
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-3">
+						<label for="numeroCasa">Numero da casa</label> <input type="text"
+							class="form-control" name="numeroCasa" id="numeroCasa" placeholder="10">
+					</div>
+					<div class="form-group col-md-3">
 						<label for="complemento">Complemento</label> <input type="text"
 							class="form-control" name="complemento" id="complemento" placeholder="Ap 20">
 					</div>

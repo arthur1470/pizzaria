@@ -10,4 +10,5 @@ public interface IClienteDao {
 	void cadastrar(Cliente cliente);
 	List<Cliente> listarClientes();
 	boolean clienteNaoExiste(Cliente cliente);
+	void editarCliente(Cliente cliente);
 }

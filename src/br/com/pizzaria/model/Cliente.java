@@ -7,18 +7,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Cliente {
+public class Cliente {	
 	
 	@Id
 	@GeneratedValue
 	private Integer id;
 	private String nome;
+	private String numeroCelular;
 	private String email;
 	private String senha;
 	private String cpf;
 	private String cep;
 	private Date dataNascimento;
 	private String endereco;
+	private Integer numeroCasa;
 	private String complemento;
 	private String cidade;
 	private String estado;
@@ -109,4 +111,46 @@ public class Cliente {
 	public void setCep(String cep) {
 		this.cep = cep;
 	}
+
+	public String getNumeroCelular() {
+		return numeroCelular;
+	}
+
+	public void setNumeroCelular(String numeroCelular) {
+		this.numeroCelular = numeroCelular;
+	}
+
+	public Integer getNumeroCasa() {
+		return numeroCasa;
+	}
+
+	public void setNumeroCasa(Integer numeroCasa) {
+		this.numeroCasa = numeroCasa;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cliente other = (Cliente) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
+	
 }

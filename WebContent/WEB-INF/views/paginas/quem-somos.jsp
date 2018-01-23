@@ -20,8 +20,7 @@
 					 grossa e lançaram, na cidade, as melhores pizzas, com produtos de alta qualidade. Começava
 					 então a história da Pizzaria sonho, que com o passar dos dias foi conquistando seu espaço entre
 					 as melhores pizzarias da cidade e o respeito pela sua receita original e seu ambiente
-					 descontraído
-
+					 descontraído.
 			</fieldset>
 			
 			<c:import url="/rodape"></c:import>

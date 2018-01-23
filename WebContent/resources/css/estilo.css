@@ -12,6 +12,10 @@
 	transition : 1s;
 }
 
+.menu ul li{
+	size : 500px;
+}
+
 .login{
 	margin-top: 20px;
 	position : relative;
@@ -31,7 +35,7 @@
 	margin-left: 269px;
 	margin-top: -930px;
 	color: black;
-	width: 150px;
+	width: 250px;
 }
 
 .vegetariana{
@@ -41,7 +45,7 @@
 	margin-left: 540px;
 	margin-top: -750px;
 	color: black;
-	width: 150px;
+	width: 250px;
 }
 
 .especiais{
@@ -51,7 +55,7 @@
 	margin-left: 800px;
 	margin-top: -930px;
 	color: black;
-	width: 150px;
+	width: 250px;
 }
 
 .doces{
@@ -61,5 +65,50 @@
 	margin-left: 800px;
 	margin-top: -490px;
 	color: black;
-	width: 150px;
+	width: 250px;
+}
+
+.sabor{
+	color: green
+}
+
+.ingredientes{
+	color: red;	
+	font-size: 11px;
+}
+
+div.corpo{
+	padding-left : 300px;
+	padding-right : 300px;
+	padding-top : 15px;
+	padding-bottom: 20px;
+}
+
+.log{
+	margin-top  : 60px;
+	margin-left : 30%;
+	margin-right : 30%;	
+}
+
+.promo a:hover{
+	text-decoration: none;
+}
+
+.promo h1 h2{
+	text-align: center;
+}
+.promo{
+	text-align: center;
+}
+.promo video{
+	position:absolute;
+	top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-50px;
+}
+.dados{
+	margin-right: 20%;
+	margin-left: 20%;	
+	margin-top: 60px;
 }
